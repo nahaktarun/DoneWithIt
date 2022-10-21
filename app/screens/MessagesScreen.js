@@ -6,7 +6,7 @@ import {
   Platform,
   StyleSheet,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
 import ListItemSeperator from "../components/ListItemSeperator";
@@ -28,6 +28,12 @@ const messages = [
 
 // Using expo constants
 export default function () {
+  //   const [message, setMessage] = useState(initialMessages);
+  const [refreshing, setRefreshing] = useState(false);
+
+  //   const handleDelete = (message) => {
+  //     setMessage(messages.filter((m) => m.id != message.id));
+  //   };
   return (
     <Screen>
       <FlatList
@@ -42,6 +48,17 @@ export default function () {
           />
         )}
         ItemSeparatorComponent={ListItemSeperator}
+        refreshing={refreshing}
+        onRefresh={() => {
+          //   setMessage([
+          //     {
+          //       id: 2,
+          //       title: "T2",
+          //       description: "D2",
+          //       image: require("../assets/chair.jpg"),
+          //     },
+          //   ]);
+        }}
       />
     </Screen>
   );
