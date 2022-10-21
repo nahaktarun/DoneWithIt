@@ -4,6 +4,7 @@ import AppButton from "./app/components/AppButton";
 import Card from "./app/components/Card";
 import Icon from "./app/components/Icon";
 import Screen from "./app/components/Screen";
+import AccountScreen from "./app/screens/AccountScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
@@ -40,9 +41,10 @@ function App(props) {
     // <ViewImageScreen />
     // <MessagesScreen />
 
-    <Screen>
-      <Icon name="email" size={50} backgroundColor="red" iconColor="white" />
-    </Screen>
+    // <Screen>
+    //   <Icon name="email" size={50} backgroundColor="red" iconColor="white" />
+    // </Screen>
+    <AccountScreen />
   );
 }
 
