@@ -6,6 +6,7 @@ import Icon from "./app/components/Icon";
 import Screen from "./app/components/Screen";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ListingScreen from "./app/screens/ListingScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 
@@ -44,7 +45,8 @@ function App(props) {
     // <Screen>
     //   <Icon name="email" size={50} backgroundColor="red" iconColor="white" />
     // </Screen>
-    <AccountScreen />
+    // <AccountScreen />
+    <ListingScreen />
   );
 }
 
