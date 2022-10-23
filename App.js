@@ -1,6 +1,7 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 import AppButton from "./app/components/AppButton";
+import AppTextInput from "./app/components/AppTextInput";
 import Card from "./app/components/Card";
 import Icon from "./app/components/Icon";
 import Screen from "./app/components/Screen";
@@ -46,7 +47,11 @@ function App(props) {
     //   <Icon name="email" size={50} backgroundColor="red" iconColor="white" />
     // </Screen>
     // <AccountScreen />
-    <ListingScreen />
+    // <ListingScreen />
+
+    <Screen>
+      <AppTextInput placeholder="Username" icon="email" />
+    </Screen>
   );
 }
 
