@@ -12,6 +12,7 @@ import AppPicker from "./app/components/AppPicker";
 import AppTextInput from "./app/components/AppTextInput";
 import Card from "./app/components/Card";
 import Icon from "./app/components/Icon";
+import LoginScreen from "./app/components/LoginScreen";
 import Screen from "./app/components/Screen";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
@@ -27,6 +28,7 @@ const categories = [
 
 function App(props) {
   const [isNew, setIsNew] = useState(false);
+  const [category, setCategory] = useState(categories[0]);
   return (
     // <ImageBackground
     //   blurRadius={10}
@@ -69,8 +71,15 @@ function App(props) {
 
       {/* <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} /> */}
 
-      <AppPicker icon="apps" placeholder="Category" items={categories} />
-      <AppTextInput icon="email" placeholder="Email" />
+      {/* <AppPicker
+        selectedItem={category}
+        onSelectItem={(item) => setCategory(item)}
+        icon="apps"
+        placeholder="Category"
+        items={categories}
+      />
+      <AppTextInput icon="email" placeholder="Email" /> */}
+      <LoginScreen />
     </Screen>
   );
 }
