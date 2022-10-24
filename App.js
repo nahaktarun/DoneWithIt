@@ -1,6 +1,14 @@
-import React from "react";
-import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
+import React, { useState } from "react";
+import {
+  ImageBackground,
+  StyleSheet,
+  View,
+  Image,
+  Text,
+  Switch,
+} from "react-native";
 import AppButton from "./app/components/AppButton";
+import AppPicker from "./app/components/AppPicker";
 import AppTextInput from "./app/components/AppTextInput";
 import Card from "./app/components/Card";
 import Icon from "./app/components/Icon";
@@ -11,7 +19,14 @@ import ListingScreen from "./app/screens/ListingScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 
+const categories = [
+  { label: "Furniture", value: 1 },
+  { label: "clothing", value: 2 },
+  { label: "camera", value: 3 },
+];
+
 function App(props) {
+  const [isNew, setIsNew] = useState(false);
   return (
     // <ImageBackground
     //   blurRadius={10}
@@ -50,7 +65,12 @@ function App(props) {
     // <ListingScreen />
 
     <Screen>
-      <AppTextInput placeholder="Username" icon="email" />
+      {/* <AppTextInput placeholder="Username" icon="email" /> */}
+
+      {/* <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} /> */}
+
+      <AppPicker icon="apps" placeholder="Category" items={categories} />
+      <AppTextInput icon="email" placeholder="Email" />
     </Screen>
   );
 }
