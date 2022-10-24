@@ -6,6 +6,7 @@ import AppText from "./AppText";
 import AppTextInput from "./AppTextInput";
 import AppButton from "./AppButton";
 import * as Yup from "yup";
+import ErrorMessage from "./ErrorMessage";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
@@ -32,7 +33,7 @@ const LoginScreen = () => {
               onChangeText={handleChange("email")}
               textContentType="emailAddress"
             />
-            <AppText style={{ color: "red" }}>{errors.email}</AppText>
+            <ErrorMessage error={errors.email} />
             <AppTextInput
               autoCapitalize="none"
               autoCorrect={false}
@@ -42,7 +43,7 @@ const LoginScreen = () => {
               textContentType="password"
               secureTextEntry
             />
-            <AppText style={{ color: "red" }}>{errors.password}</AppText>
+            <ErrorMessage error={errors.password} />
             <AppButton title="Login" onPress={handleSubmit} />
           </>
         )}
