@@ -16,6 +16,7 @@ import LoginScreen from "./app/components/LoginScreen";
 import Screen from "./app/components/Screen";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 import ListingScreen from "./app/screens/ListingScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
@@ -65,7 +66,6 @@ function App(props) {
     // </Screen>
     // <AccountScreen />
     // <ListingScreen />
-
     <Screen>
       {/* <AppTextInput placeholder="Username" icon="email" /> */}
 
@@ -79,7 +79,8 @@ function App(props) {
         items={categories}
       />
       <AppTextInput icon="email" placeholder="Email" /> */}
-      <LoginScreen />
+      {/* <LoginScreen /> */}
+      <ListingEditScreen />
     </Screen>
   );
 }
